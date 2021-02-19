@@ -6,13 +6,16 @@ const express = require("express");
 
 const router = express.Router();
 
-router.use("/add", (req, res, next) => {
+const products = ["1"];
+
+router.get("/add", (req, res, next) => {
   res.sendFile(path.join(rootDir, "views", "add.html"));
 });
 
-router.post("/product", (req, res, next) => {
-  console.log(req.body);
+router.post("/add", (req, res, next) => {
+  products.push(req.body);
   res.redirect("/");
 });
 
-module.exports = router;
+exports.routes = router;
+exports.products = products;
