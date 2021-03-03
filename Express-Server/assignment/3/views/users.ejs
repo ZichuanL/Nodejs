@@ -1,0 +1,12 @@
+<html>
+  <h1>all user</h1>
+  <% if (users.length > 0) { %>
+  <div>
+    <% for (let user of users) { %>
+    <h1><%= user.name %></h1>
+    <% } %>
+  </div>
+  <% }else {%>
+  <h1>No users</h1>
+  <%}%>
+</html>
