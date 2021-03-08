@@ -35,3 +35,10 @@ const toArray = (...args) => {
 };
 
 console.log(toArray(1, 2, 3, 4));
+
+var numbers = [1, 2, 3];
+var val = numbers.entries();
+console.log(val);
+
+let abc = "123";
+console.log(5 + +abc);
